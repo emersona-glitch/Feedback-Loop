@@ -12,6 +12,27 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 TASKS
 =====
 
+[x] set up file structure for components
+    [x] create folders and files
+    [x] fill components with boilerplate
+    [x] import in App.js
+    [x] set up <Router/> around <div> in App.js
+    [x] set up Routes
+[] make next button move on to the next route (keeping
+    sequences of routes in an array so that it can be
+    indexed?)
+    [] Set up links?
+    [] onClick functionality for Button
+    [] bruh
+
+
+
+
+[] Setup view routing flow
+    [] lmao how do routers work
+    [] get all the parts
+    [] make all the things
+    [] pages versus components
 
 4 view / part forms
 No Nav bar -- pipelined progression
@@ -20,6 +41,10 @@ No Nav bar -- pipelined progression
     [] support
     [] comments
 so we need to set up router
+
+
+
+
 
 [] Input validation for every page to make sure they don't progress
     without entering necessar info
