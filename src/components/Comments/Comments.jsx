@@ -6,6 +6,10 @@ import TextField from '@material-ui/core/TextField';
 
 class Comments extends Component {
 
+    state = {
+        feeling: 0
+    }
+
     handleNext = () => {
         this.props.history.push('/Review')
     }
@@ -17,7 +21,7 @@ class Comments extends Component {
                 <TextField id="comments" label="Standard" />
                 <br/><br/>
                 <Button variant="contained"
-                    /* onClick={() => this.props.history.push('/Understanding')} */>
+                    onClick={() => this.props.history.goBack()}>
                     Back
                 </Button>
                 <Button variant="contained" color="primary"

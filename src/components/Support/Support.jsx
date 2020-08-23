@@ -9,6 +9,10 @@ import FormControl from '@material-ui/core/FormControl';
 
 class Support extends Component {
 
+    state = {
+        feeling: 0
+    }
+
     handleNext = () => {
         this.props.history.push('/Comments')
     }
@@ -36,7 +40,7 @@ class Support extends Component {
                     </RadioGroup>
                 </FormControl><br/>
                 <Button variant="contained"
-                    /* onClick={() => this.props.history.push('/Understanding')} */>
+                    onClick={() => this.props.history.goBack()}>
                     Back
                 </Button>
                 <Button variant="contained" color="primary"

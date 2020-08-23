@@ -7,6 +7,10 @@ import Button from '@material-ui/core/Button';
 
 class Review extends Component {
 
+    state = {
+        feedback: {}
+}
+
     handleNext = () => {
         this.props.history.push('/Thanks')
     }
@@ -15,9 +19,9 @@ class Review extends Component {
         return (
             <>
                 <p>Please review your answers and click "Submit" when you're ready.</p>
-                <p>Here is your Input: </p>
+                <p>Here is your Feedback: </p>
                 <Button variant="contained"
-                    /* onClick={() => this.props.history.push('/Understanding')} */>
+                    onClick={() => this.props.history.goBack()}>
                     Back
                 </Button>
                 <Button variant="contained" color="primary"

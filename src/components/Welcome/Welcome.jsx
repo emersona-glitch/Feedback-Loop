@@ -9,6 +9,7 @@ class Welcome extends Component {
         this.props.history.push('/Feeling')
     }
 
+
     render() {
         return (
             <>
