@@ -26,19 +26,19 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <h1 className="App-title">Feedback!</h1>
+          </header>
 
 
             <Route exact path='/' component={Welcome} />
-            <Route exact path='/first' component={Feeling} />
-            <Route exact path='/second' component={Understanding} />
-            <Route exact path='/third' component={Support} />
-            <Route exact path='/fourth' component={Comments} />
-            <Route exact path='/fifth' component={Review} />
-            <Route exact path='/last' component={Thanks} />
+            <Route exact path='/Feeling' component={Feeling} />
+            <Route exact path='/Understanding' component={Understanding} />
+            <Route exact path='/Support' component={Support} />
+            <Route exact path='/Comments' component={Comments} />
+            <Route exact path='/Review' component={Review} />
+            <Route exact path='/Thanks' component={Thanks} />
             <Route exact path='/admin' component={Admin} />
 
 
-          </header>
           <br />
         </div>
       </Router>
