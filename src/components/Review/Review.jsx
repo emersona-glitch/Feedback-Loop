@@ -12,6 +12,7 @@ class Review extends Component {
 }
 
     handleNext = () => {
+        console.log(this.state);
         this.props.history.push('/Thanks')
     }
 

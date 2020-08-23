@@ -10,15 +10,22 @@ import FormControl from '@material-ui/core/FormControl';
 class Understanding extends Component {
 
     state = {
-        feeling: 0
+        understanding: 0
     }
 
     handleNext = () => {
-        this.props.history.push('/Support')
+        if (this.state.understanding === 0) {
+            alert('Please select a value.')
+        } else {
+            console.log(this.state);
+            this.props.history.push('/Support')
+        }
     }
 
-    handleChange = () => {
-        return null
+    handleChange = (event) => {
+        this.setState({
+            understanding: Number(event.target.value)
+        })
     }
 
     render() {

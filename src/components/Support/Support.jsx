@@ -1,24 +1,34 @@
 import React, { Component } from 'react';
 import Router, { withRouter } from 'react-router-dom'
+import { connect } from 'react-redux';
+
 // MATERIAL UI:
 import Button from '@material-ui/core/Button';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
+import { Connection } from 'pg';
 
 class Support extends Component {
 
     state = {
-        feeling: 0
+        support: 0
     }
 
     handleNext = () => {
-        this.props.history.push('/Comments')
+        if (this.state.support === 0) {
+            alert('Please select a value.')
+        } else {
+            console.log(this.state);
+            this.props.history.push('/Comments')
+        }
     }
 
-    handleChange = () => {
-        return null
+    handleChange = (event) => {
+        this.setState({
+            support: Number(event.target.value)
+        })
     }
 
     render() {
@@ -62,4 +72,4 @@ class Support extends Component {
     }
 }
 
-export default withRouter(Support);
+export default connect()(withRouter(Support));

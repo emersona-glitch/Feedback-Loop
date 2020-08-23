@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'
+import { connect } from 'react-redux'
 // MATERIAL UI:
 import Button from '@material-ui/core/Button';
 import Radio from '@material-ui/core/Radio';
@@ -14,15 +15,26 @@ class Feeling extends Component {
     }
 
     handleNext = () => {
-        this.props.history.push('/Understanding')
+        if (this.state.feeling === 0) {
+            alert('Please select a value.')
+        } else {
+            console.log(this.state);
+            this.props.dispatch({
+                type: 'ADD_FEELING',
+                payload: this.state.feeling
+            })
+            this.props.history.push('/Understanding')
+        }
     }
 
     handleBack = () => {
         this.props.history.goBack()
     }
 
-    handleChange = () => {
-        return null
+    handleChange = (event) => {
+        this.setState({
+            feeling: Number(event.target.value)
+        })
     }
 
     render() {
@@ -57,4 +69,4 @@ class Feeling extends Component {
     }
 }
 
-export default withRouter(Feeling);
+export default connect()(withRouter(Feeling));
