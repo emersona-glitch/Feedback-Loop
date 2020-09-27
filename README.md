@@ -1,57 +1,41 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# Feedback Loop
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+_Duration: Weekend Project_
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+This web app is a simple interface to receive feedback from a program similar to the one I was enrolled in at Prime Academy. Users are guided, step by step, to submit feedback about their weekly experience.
 
+### Prerequisites
 
-TASKS
-=====
+You will need [Node.js](https://nodejs.org/en/) and the node package manager to install dependencies for this app.
+You will also need [PostgresQL](https://www.postgresql.org/) to run the database for this app.
 
-[x] set up file structure for components
-    [x] create folders and files
-    [x] fill components with boilerplate
-    [x] import in App.js
-    [x] set up <Router/> around <div> in App.js
-    [x] set up Routes
-[] make next button move on to the next route (keeping
-    sequences of routes in an array so that it can be
-    indexed?)
-    [] Set up links?
-    [] onClick functionality for Button
-    [] bruh
+## Installation
 
+1. Fork this repository and Clone using `git clone <repo-url.git>`
+2. Install any dependencies by navigating to the project directory and using `npm install` in terminal.
+3. Create a database named `prime_feedback`,
+4. The queries in the `database.sql` file are set up to create the table required for this project.
+   The project is built on [Postgres](https://www.postgresql.org/download/), so you will need to make sure to have that installed.
+   I recommend using Postico to run the CREATE TABLE queries, as this is what I used.
+7. Run `npm run server` in your terminal
+8. Run `npm run client` in your terminal -- the app should automatically open in your browser.
 
+## Usage
 
+1. Users will be prompted with a landing page upon opening the app. Clicking "start" to begin submitting feedback
+2. After clicking "start," the user will be asked to select how well they are feeling, on a scale from 1 - 5. Once they have made a selection, they can click the "Next" button to move on to the next view.
+3. The app continues collecting information from the user in a similar fashion for: How well the user feels they are understanding material and how supported they feel. The user will also have an opportunity to submit optional comments.
+4. After submitting information on the previous pages, the user can review what they've submitted and go back and make any changes if they're not satisfied.
+5. Once satisfied, clicking "submit" will bring the user to a "Thank You" page, where they can choose to repeat the process and submit more feedback.
 
-[] Setup view routing flow
-    [] lmao how do routers work
-    [] get all the parts
-    [] make all the things
-    [] pages versus components
+## Built With
 
-4 view / part forms
-No Nav bar -- pipelined progression
-    [] feeling
-    [] understanding
-    [] support
-    [] comments
-so we need to set up router
+I built this app using React-Redux, PostgresQL, node, and express.
 
+## Acknowledgement
+Thanks to [Prime Digital Academy](www.primeacademy.io) who gave me the training and guidance to complete this project. Special thanks to [Dane Smith](https://github.com/DoctorHowser), my instructor!
 
-
-
-
-[] Input validation for every page to make sure they don't progress
-    without entering necessar info
-
-[] Review Feedback
-    no changes or going back for base-mode
-
-[] Submit Feedback
-    button to click on review page submits data,
-    success prompt, and ability to navigate back to the first page.
+## Support
+If you have suggestions or issues, please email [emerson.aagaard@gmail.com](emerson.aagaard@gmail.com)!
